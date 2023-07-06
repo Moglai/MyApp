@@ -8,17 +8,19 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapp.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 open class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: MainActivity
+    private lateinit var binding: ActivityMainBinding
     lateinit var adapter: MyAdapter
     lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val DelAlls: ImageButton = findViewById(R.id.DelAll)
         val AddAlls: ImageButton = findViewById(R.id.AddAll)
@@ -36,7 +38,7 @@ open class MainActivity : AppCompatActivity() {
 
     private fun initial() {
         recyclerView = binding.RV
-        adapter = MyAdapter()
+        adapter = MyAdapter(this)
         recyclerView.adapter = adapter
         adapter.setList(ThisCard())
     }
