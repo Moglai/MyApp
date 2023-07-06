@@ -27,10 +27,8 @@ class MyAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
         return Tasklist.size
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun setlist(list: List<ModelTask>) {
+    fun setList(list: List<ModelTask>) {
         Tasklist = list
-        notifyDataSetChanged()
     }
 
 }
