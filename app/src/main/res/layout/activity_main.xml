@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Grey"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:text="@string/your_task"
+            android:textColor="@color/white"
+            android:textSize="46sp" />
+
+        <ImageButton
+            android:id="@+id/DelAll"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:contentDescription="@string/DelAll"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="579dp"
+            tools:listitem="@layout/task_model"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <ImageButton
+            android:id="@+id/AddAll"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-290dp"
+            android:contentDescription="@string/AddAll"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </FrameLayout>
+
+</LinearLayout>

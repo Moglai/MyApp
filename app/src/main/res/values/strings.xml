@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="your_task"> Your Tasks:</string>
+    <string name="DelAll">DelAll</string>
+    <string name="AddAll">AddAll</string>
+    <string name="your_task_here">your task</string>
+    <string name="your_description_here">your description</string>
+    <string name="Task">Task</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="OK">OK</string>
+    <string name="ChangeTask">Change Task</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+
+</resources>
