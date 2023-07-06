@@ -1,11 +1,11 @@
 package com.example.myapp
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.task_model.view.*
-import java.nio.file.attribute.UserPrincipal
 
 class MyAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
@@ -25,6 +25,12 @@ class MyAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun getItemCount(): Int {
         return Tasklist.size
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setlist(list: List<ModelTask>) {
+        Tasklist = list
+        notifyDataSetChanged()
     }
 
 }
