@@ -25,6 +25,8 @@ open class MainActivity : AppCompatActivity() {
         val DelAlls: ImageButton = findViewById(R.id.DelAll)
         val AddAlls: ImageButton = findViewById(R.id.AddAll)
 
+
+
         AddAlls.setOnClickListener {
             val intent = Intent(this@MainActivity, MakerTask::class.java)
             startActivity(intent)
@@ -54,6 +56,22 @@ open class MainActivity : AppCompatActivity() {
 
         val Card3 = ModelTask("Work", "More")
         TaskList.add(Card3)
+
+
+        val Card4 = ModelTask("Work", "More")
+        TaskList.add(Card4)
+
+
+        val Card5 = ModelTask("Work", "More")
+        TaskList.add(Card5)
+
+
+        val Card6 = ModelTask("Work", "More")
+        TaskList.add(Card6)
+
+
+        val Card7 = ModelTask("Work", "More")
+        TaskList.add(Card7)
 
         return TaskList
     }
