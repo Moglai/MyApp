@@ -20,7 +20,8 @@ open class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         DelAlls.setOnClickListener {
-            ///Toast.makeText(this, "You click on the wrong button!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@MainActivity, ChangeTask::class.java)
+            startActivity(intent)
         }
     }
 }
