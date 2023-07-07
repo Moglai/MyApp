@@ -30,7 +30,11 @@ open class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = NewAdapter()
+        adapter = NewAdapter(object : CardActionListener {
+            override fun onCardDelete(modelTask: ModelTask) {
+                taskService.deleteTask(modelTask)
+            }
+        })
 
         val layoutManager = LinearLayoutManager(this)
         binding.RV.layoutManager = layoutManager
