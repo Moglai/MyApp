@@ -11,11 +11,11 @@ class TaskService {
 
     init {
         val faker = Faker.instance()
-        val generetedTasks = (1..10).map { ModelTask(
+        cards = (1..10).map { ModelTask(
             id = it.toLong(),
             MyTask = faker.name().name(),
             MyDescription = faker.name().name()
-        ) }
+        ) }.toMutableList()
     }
 
     fun getTasks(): List<ModelTask> {
