@@ -21,13 +21,6 @@
             android:textColor="@color/white"
             android:textSize="46sp" />
 
-        <ImageButton
-            android:id="@+id/DelAll"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:contentDescription="@string/DelAll"
-            app:srcCompat="@android:drawable/ic_delete" />
-
     </LinearLayout>
 
     <FrameLayout

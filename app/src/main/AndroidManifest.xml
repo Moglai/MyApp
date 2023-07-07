@@ -29,9 +29,6 @@
         <activity
             android:name=".MakerTask">
         </activity>
-        <activity
-            android:name=".ChangeTask">
-        </activity>
     </application>
 
 </manifest>
