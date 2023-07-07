@@ -35,44 +35,5 @@ open class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, ChangeTask::class.java)
             startActivity(intent)
         }
-        initial()
-    }
-
-    private fun initial() {
-        recyclerView = binding.RV
-        adapter = MyAdapter(this)
-        recyclerView.adapter = adapter
-        adapter.setList(ThisCard())
-    }
-
-    fun ThisCard(): ArrayList<ModelTask> {
-        val TaskList = ArrayList<ModelTask>()
-
-        val Card = ModelTask("Work", "More")
-        TaskList.add(Card)
-
-        val Card2 = ModelTask("Work", "More")
-        TaskList.add(Card2)
-
-        val Card3 = ModelTask("Work", "More")
-        TaskList.add(Card3)
-
-
-        val Card4 = ModelTask("Work", "More")
-        TaskList.add(Card4)
-
-
-        val Card5 = ModelTask("Work", "More")
-        TaskList.add(Card5)
-
-
-        val Card6 = ModelTask("Work", "More")
-        TaskList.add(Card6)
-
-
-        val Card7 = ModelTask("Work", "More")
-        TaskList.add(Card7)
-
-        return TaskList
     }
 }

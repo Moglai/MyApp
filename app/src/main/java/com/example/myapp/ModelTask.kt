@@ -1,6 +1,7 @@
 package com.example.myapp
 
-class ModelTask (
+data class ModelTask(
+    val id: Long,
     val MyTask: String,
     val MyDescription: String
 )
