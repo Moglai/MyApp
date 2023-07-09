@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BABABA"
     android:orientation="vertical"
+    android:background="#BABABA"
     android:gravity="center"
     android:padding="20dp"
-    tools:context=".MakerTask">
+    tools:context=".NewTask">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,38 +15,35 @@
         android:text="@string/Task"
         android:textColor="@color/black"
         android:textSize="36sp"
-        android:gravity="center"
-        android:fontFamily="sans-serif"/>
+        android:gravity="center"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/create_title"
+        android:id="@+id/c_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/title"
         android:layout_marginTop="20dp"
         android:padding="15dp"
         android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        />
+        android:textColor="@color/black"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/create_description"
+        android:id="@+id/c_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/description"
         android:layout_marginTop="30dp"
         android:padding="15dp"
         android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        />
+        android:textColor="@color/black"/>
 
     <Button
-        android:id="@+id/ok_button"
+        android:id="@+id/ok_butt"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#00B945"
         android:text="@string/OK"
-        android:textSize="18sp" />
+        android:textSize="18sp"/>
 
 </LinearLayout>

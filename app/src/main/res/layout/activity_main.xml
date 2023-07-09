@@ -27,12 +27,51 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RV"
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/RV"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="566dp"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            tools:listitem="@layout/task_model" />-->
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="566dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/task_model" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Grey">
+
+            <LinearLayout
+                android:id="@+id/mylayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#BABABA"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/taskName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/your_task_here"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:lines="1"/>
+
+                <TextView
+                    android:id="@+id/taskDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/your_description_here"
+                    android:textColor="@color/black"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:lines="1"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <ImageButton
             android:id="@+id/AddAll"

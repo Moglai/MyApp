@@ -5,12 +5,14 @@
     <string name="AddAll">AddAll</string>
     <string name="your_task_here">your task</string>
     <string name="your_description_here">your description</string>
-    <string name="Task">Task</string>
+    <string name="Task">New task</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="OK">OK</string>
     <string name="ChangeTask">Change Task</string>
     <string name="delete">Delete</string>
     <string name="update">Update</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

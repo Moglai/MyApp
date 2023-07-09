@@ -4,5 +4,5 @@ import android.app.Application
 
 class App : Application() {
 
-    val taskService = TaskService()
+//    val taskService = TaskService()
 }
