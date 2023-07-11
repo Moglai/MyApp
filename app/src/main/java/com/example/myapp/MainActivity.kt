@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapp.databinding.ActivityMainBinding
 
-open class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity(), TaskModelClickListener {
 
 
     private lateinit var binding: ActivityMainBinding
@@ -30,8 +30,16 @@ open class MainActivity : AppCompatActivity() {
         taskViewModel.taskModels.observe(this) {
             binding.MyRecyclerView.apply {
                 layoutManager = LinearLayoutManager(applicationContext)
-                adapter = MegaAdapter(it)
+                adapter = MegaAdapter(it, MainActivity)
             }
         }
+    }
+
+    override fun changeTaskModel(taskModel: TaskModel) {
+        NewTask(taskModel).show(supportFragmentManager, "newTaskTag")
+    }
+
+    override fun OKTaskModel(taskModel: TaskModel) {
+        taskViewModel.setTaskModel(taskModel)
     }
 }
