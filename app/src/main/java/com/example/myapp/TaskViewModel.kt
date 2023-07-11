@@ -12,23 +12,23 @@ class TaskViewModel: ViewModel() {
         taskModels.value = mutableListOf()
     }
 
-    fun addTaskModel(nnewTask: TaskModel) {
+    fun addTaskModel(newTask: TaskModel) {
         val list = taskModels.value
-        list!!.add(nnewTask)
+        list!!.add(newTask)
         taskModels.postValue(list)
     }
 
     fun updateTaskModel(id: UUID, name: String, desc: String) {
         val list = taskModels.value
-        val taskk = list!!.find { it.id == id }!!
-        taskk.name = name
-        taskk.desc = desc
+        val task = list!!.find { it.id == id }!!
+        task.name = name
+        task.desc = desc
         taskModels.postValue(list)
     }
 
     fun setTaskModel(taskModel: TaskModel) {
         val list = taskModels.value
-        val taskk = list!!.find { it.id == taskModel.id }!!
+        val task = list!!.find { it.id == taskModel.id }!!
         taskModels.postValue(list)
     }
 }

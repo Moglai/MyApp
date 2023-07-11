@@ -7,3 +7,6 @@ class TaskModel (
     var desc: String,
     var id: UUID = UUID.randomUUID()
 )
+{
+
+}
